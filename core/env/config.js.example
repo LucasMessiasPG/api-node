@@ -1,0 +1,9 @@
+const CONFIG = {
+    port: process.env.PORT || 8081,
+    env: process.env.STATUS || "dev", 
+    database: "mongodb://localhost:27017/",
+    secret: process.env.SECRET || "5B790051D90E788A8665CF8CDA46FCA27439CB0078F1EE4E7F35984B92C79DE6",
+    debug: true
+}
+
+module.exports = CONFIG;
