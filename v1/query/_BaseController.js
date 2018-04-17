@@ -1,5 +1,4 @@
 const CoreQueryController = require("../../core/controller/BaseQueryController");
-const UserQuery = require("./user.query");
 const fs = require("fs");
 
 class BaseQueryBuilder extends CoreQueryController{

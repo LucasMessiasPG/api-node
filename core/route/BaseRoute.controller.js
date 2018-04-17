@@ -67,6 +67,11 @@ class BaseRouteController{
                 if(!req.user || !req.user.username){
                     return res.status(400).json({success: false, message: "token not found"});
                 }
+            }else{
+                req.user = {
+                    name: "Lucas Messias",
+                    reference_id: "1234"
+                };
             }
 
             context.initRequest(req, res, next);

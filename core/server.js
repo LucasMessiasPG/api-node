@@ -2,7 +2,7 @@ const CONFIG    = require("./env/config");
 const mongoose  = require("mongoose");
 const Models    = require('./models');
 const JWT       = require('jsonwebtoken');
-
+const AWS       = require('aws-sdk');
 
   
 

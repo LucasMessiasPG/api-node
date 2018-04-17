@@ -8,11 +8,11 @@ class RouteController extends BaseRouteController{
 
     getRoutes(){
 
-        this.get("/", this.ExampleController, "test");
-        // this.post(...)
-        // this.patch(...)
-        // this.put(...)
-        // this.delete(...)
+        this.post( "/chat",                                 this.ChatController,    "create",               { userNotRequired: true });
+        this.get(  "/chat/:chat_id",                        this.ChatController,    "get",                  { userNotRequired: true });
+        this.post( "/chat/:chat_id/group",                  this.ChatController,    "createGroup",          { userNotRequired: true });
+        this.post( "/chat/:chat_id/group/:group_id/user",   this.ChatController,    "addUserOnGroup",       { userNotRequired: true });
+        this.post( "/chat/:chat_id/group/:group_id/message",this.ChatController,    "postMessage",          { userNotRequired: true });
 
         return this.router;
     }
